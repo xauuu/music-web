@@ -36,7 +36,7 @@
                     <tr>
                         <th scope="row">{{ $value1->id }}</th>
                         <td>{{ $value1->name }}</td>
-                        <td><img src="{{config('global.url').$value1->imageUrl}}" alt=""></td>
+                        <td><img src="{{config('global.url-image').$value1->imageUrl}}" alt=""></td>
                         <td>{{ $value1->desc }}</td>
                         <td>
                             <a class="btn btn-outline-danger" onclick="return confirm('Xoá bài hát này')" href="{{ URL::to('/admin/delete-song/' . $value1->id) }}">
