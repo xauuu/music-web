@@ -37,8 +37,8 @@
                         <td>{{ $value1->id }}</td>
                         <td>{{ $value1->name }}</td>
                         <td>{{ $value1->album->name }}</td>
-                        <td>{{ $value1->singer }}</td>
-                        <td><img src="{{ $value1->imageUrl }}" width="100"></td>
+                        <td>{{ $value1->artist }}</td>
+                        <td><img src="{{ config('global.url-image').$value1->imageUrl }}" width="100"></td>
                         <td>
                             <a class="btn btn-outline-danger" onclick="return confirm('Xoá bài hát này')" href="{{ URL::to('/admin/delete-song/' . $value1->id) }}">
                                 <i class="align-middle" data-feather="trash-2"></i></a>
