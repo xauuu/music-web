@@ -19,6 +19,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('admin');
 });
+<<<<<<< HEAD
+=======
+Route::get('/dashboard', function () {
+    return view('admin');
+});
+>>>>>>> 50db50f (change routes)
 Route::get('add-album', [AlbumController::class, 'add_album']);
 Route::post('save-album', [AlbumController::class, 'save_album']);
 Route::get('all-album', [AlbumController::class, 'all_album']);

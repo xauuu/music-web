@@ -22,7 +22,7 @@
     <div class="wrapper">
         <nav id="sidebar" class="sidebar">
             <div class="sidebar-content js-simplebar">
-                <a class="sidebar-brand" href="{{ URL::to('/admin/dashboard') }}">
+                <a class="sidebar-brand" href="{{ URL::to('/dashboard') }}">
                     <span class="align-middle">Xau</span>
                 </a>
 
@@ -33,12 +33,12 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ URL::to('/admin/all-album') }}">
+                        <a class="sidebar-link" href="{{ URL::to('/all-album') }}">
                             <i class="align-middle" data-feather="trending-up"></i> <span class="align-middle">Album</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ URL::to('/admin/all-song') }}">
+                        <a class="sidebar-link" href="{{ URL::to('/all-song') }}">
                             <i class="align-middle" data-feather="trending-up"></i> <span class="align-middle">Bài hát</span>
                         </a>
                     </li>
