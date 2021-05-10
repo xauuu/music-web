@@ -17,7 +17,7 @@ class Album extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'imageUrl' => config('global.url').$this->imageUrl,
+            'imageUrl' => config('global.url-image').$this->imageUrl,
             'year' => $this->year,
         ];
     }

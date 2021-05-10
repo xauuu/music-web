@@ -41,12 +41,15 @@ class MusicController extends Controller
     	$song->views += 1;
     	$song->save();
     }
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
+    public function gians()
+    {
+        $song = Song::first();
+
+        echo config('global.url').$song->imageUrl;
+
+    }
+
     public function store(Request $request)
     {
         //

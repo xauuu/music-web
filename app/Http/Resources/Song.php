@@ -18,9 +18,9 @@ class Song extends JsonResource
             'id' => $this->id,
             'name' => $this->name,
             'album' => $this->album->name,
-            'singer' => $this->singer,
-            'imageUrl' => config('global.url').$this->imageUrl,
-            'songUrl' => config('global.url-music').$this->songUrl,
+            'artist' => $this->artist,
+            'imageUrl' => config('global.url-image').$this->imageUrl,
+            'songUrl' => config('global.url-song').$this->songUrl,
         ];
     }
 }

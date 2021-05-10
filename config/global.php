@@ -1,6 +1,6 @@
 <?php 
 return [
-	'url' => 'https://res.cloudinary.com/vku/image/upload/v1/',
-	'url-music' => 'https://res.cloudinary.com/vku/video/upload/v1/'
+	'url-image' => 'https://res.cloudinary.com/vku/image/upload/v1/',
+	'url-song' => 'https://res.cloudinary.com/vku/video/upload/v1/'
 ];
 ?>

@@ -19,7 +19,7 @@ class SongController extends Controller
         $song = new Song();
         $song->album_id = $request->album_id;
         $song->name = $request->name;
-        $song->singer = $request->singer;
+        $song->artist = $request->singer;
 
         $imgUrl = $request->file('image')->storeOnCloudinary('image');
         $song->imageUrl = $imgUrl->getPublicId();

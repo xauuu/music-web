@@ -13,7 +13,7 @@ class Song extends Model
     protected $fillable = [
         'album_id',
         'name',
-        'singer',
+        'artist',
         'songUrl',
         'imageUrl',
         'views'
