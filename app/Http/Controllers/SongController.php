@@ -10,6 +10,7 @@ class SongController extends Controller
 {
     public function add_song()
     {
+        AuthLogin();
         $album = Album::all();
         return view('song.add-song')->with('album', $album);
     }
@@ -38,6 +39,7 @@ class SongController extends Controller
 
     public function all_song()
     {
+        AuthLogin();
         $song = Song::all();
         return view('song.all-song')->with('song', $song);
     }

@@ -10,6 +10,7 @@ class AlbumController extends Controller
 {
     public function add_album()
     {
+        AuthLogin();
         return view('album.add-album');
     }
 
@@ -31,6 +32,7 @@ class AlbumController extends Controller
 
     public function all_album()
     {
+        AuthLogin();
         $album = Album::all();
         return view('album.all-album')->with('album', $album);
     }
