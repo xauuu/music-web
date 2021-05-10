@@ -42,11 +42,11 @@ class MusicController extends Controller
     	$song->save();
     }
 
-    public function gians()
+    public function search($keyword)
     {
-        $song = Song::first();
-
-        echo config('global.url').$song->imageUrl;
+        $song = Song::where("name", "LIKE", '%'.$keyword.'%')->get();
+        SongResources::withoutWrapping();
+		return SongResources::collection($song);
 
     }
 

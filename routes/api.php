@@ -22,4 +22,4 @@ Route::get('album', 'App\Http\Controllers\Api\MusicController@album');
 Route::get('album/{id}', 'App\Http\Controllers\Api\MusicController@songInalbum');
 Route::put('update-view/{id}', 'App\Http\Controllers\Api\MusicController@update_view');
 
-Route::get('gians', 'App\Http\Controllers\Api\MusicController@gians');
+Route::get('search/{keyword}', 'App\Http\Controllers\Api\MusicController@search');
