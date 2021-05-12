@@ -7,7 +7,7 @@
                 <h2 class="mt-3">Thêm Album</h2>
             </div>
             <div class="card-body">
-                <form method="POST" action="{{ URL::to('/admin/save-album')}}" enctype="multipart/form-data">
+                <form method="POST" action="{{ URL::to('/save-album')}}" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="mb-3">
                         <label class="form-label">Tên album</label>

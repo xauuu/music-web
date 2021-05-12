@@ -7,7 +7,7 @@
                 <h2 class="mt-3">Thêm Bài hát</h2>
             </div>
             <div class="card-body">
-                <form method="POST" action="{{ URL::to('/admin/save-song') }}" enctype="multipart/form-data">
+                <form method="POST" action="{{ URL::to('/save-song') }}" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="mb-3">
                         <label class="form-label">Tên bài hát</label>

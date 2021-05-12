@@ -15,7 +15,7 @@
             </div>
         @endif
         <div>
-            <a href="{{ URL::to('admin/add-song') }}" class="btn btn-outline-primary">Thêm bài hát</a>
+            <a href="{{ URL::to('add-song') }}" class="btn btn-outline-primary">Thêm bài hát</a>
         </div>
     </div>
 
@@ -42,7 +42,7 @@
                         <td>
                             <a class="btn btn-outline-danger" onclick="return confirm('Xoá bài hát này')" href="{{ URL::to('/admin/delete-song/' . $value1->id) }}">
                                 <i class="align-middle" data-feather="trash-2"></i></a>
-                            <a class="btn btn-outline-warning" href="{{ URL::to('/admin/edit-song/' . $value1->id) }}">
+                            <a class="btn btn-outline-warning" href="{{ URL::to('edit-song/' . $value1->id) }}">
                                 <i class="align-middle" data-feather="edit"></i></a>
                         </td>
                     </tr>
