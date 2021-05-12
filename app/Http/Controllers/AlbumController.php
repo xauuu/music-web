@@ -27,7 +27,7 @@ class AlbumController extends Controller
         } else {
             $request->session()->flash('success', 'Fail');
         }
-        return redirect('admin/all-album');
+        return redirect('all-album');
     }
 
     public function all_album()

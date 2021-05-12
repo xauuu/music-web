@@ -33,7 +33,7 @@ class SongController extends Controller
         } else {
             $request->session()->flash('success', 'Fail');
         }
-        return redirect('admin/all-song');
+        return redirect('all-song');
 
     }
 
