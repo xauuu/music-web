@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,5 @@ Route::get('album/{id}', 'App\Http\Controllers\Api\MusicController@songInalbum')
 Route::put('update-view/{id}', 'App\Http\Controllers\Api\MusicController@update_view');
 
 Route::get('search/{keyword}', 'App\Http\Controllers\Api\MusicController@search');
+
+Route::post('login', [UserController::class, 'login']);
