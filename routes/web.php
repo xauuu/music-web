@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\SongController;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +26,10 @@ Route::get('/dashboard', function () {
     AuthLogin();
     return view('admin');
 });
+
+Route::get('register', [UserController::class, 'register']);
+Route::post('check-register', [UserController::class, 'check_register']);
+
 Route::get('login', [AdminController::class, 'login']);
 Route::post('check-login', [AdminController::class, 'check_login']);
 

@@ -26,3 +26,4 @@ Route::put('update-view/{id}', 'App\Http\Controllers\Api\MusicController@update_
 Route::get('search/{keyword}', 'App\Http\Controllers\Api\MusicController@search');
 
 Route::post('login', [UserController::class, 'login']);
+
