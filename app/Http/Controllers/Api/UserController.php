@@ -21,7 +21,7 @@ class UserController extends Controller
 
     public function check_register(Request $request)
     {
-        if (User::where('email', '=', $request->email))
+        if (User::where('email', '=', $request->email)->first())
         {
             Session::flash('error', 'Email đã được đăng ký');
             return redirect()->back();
