@@ -15,8 +15,8 @@ class AdminController extends Controller
 
     public function check_login(Request $request)
     {
-        $email = "xmusig@admin.com";
-        $pass = "xmusig";
+        $email = "gians@admin.com";
+        $pass = "123456";
 
         if ($request->email == $email && $request->password == $pass) {
             session()->put('admin', 'admin');

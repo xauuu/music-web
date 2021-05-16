@@ -24,7 +24,7 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Ca sỹ</label>
-                        <input type="text" class="form-control" name="singer" required>
+                        <input type="text" class="form-control" name="artist" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Ảnh</label>

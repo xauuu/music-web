@@ -14,6 +14,10 @@
                         <input type="text" class="form-control" name="name" required>
                     </div>
                     <div class="mb-3">
+                        <label class="form-label">Năm phát hành</label>
+                        <input type="text" class="form-control" name="year" required>
+                    </div>
+                    <div class="mb-3">
                         <label class="form-label">Ảnh</label>
                         <input type="file" class="form-control" name="image" accept="image/*" required>
                     </div>
@@ -21,7 +25,7 @@
                         <label class="form-label">Mô tả</label>
                         <textarea class="form-control" name="desc" rows="3"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Thêm thương hiệu</button>
+                    <button type="submit" class="btn btn-primary">Thêm album</button>
                 </form>
             </div>
         </div>

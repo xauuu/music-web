@@ -33,10 +33,17 @@ Route::post('check-register', [UserController::class, 'check_register']);
 Route::get('login', [AdminController::class, 'login']);
 Route::post('check-login', [AdminController::class, 'check_login']);
 
-Route::get('add-album', [AlbumController::class, 'add_album']);
-Route::post('save-album', [AlbumController::class, 'save_album']);
-Route::get('all-album', [AlbumController::class, 'all_album']);
+Route::get('add-album', [AlbumController::class, 'create']);
+Route::post('save-album', [AlbumController::class, 'store']);
+Route::get('all-album', [AlbumController::class, 'show']);
+Route::get('edit-album/{id}', [AlbumController::class, 'edit']);
+Route::post('update-album/{id}', [AlbumController::class, 'update']);
+Route::get('destroy-album/{id}', [AlbumController::class, 'destroy']);
 
-Route::get('add-song', [SongController::class, 'add_song']);
-Route::post('save-song', [SongController::class, 'save_song']);
-Route::get('all-song', [SongController::class, 'all_song']);
+Route::get('add-song', [SongController::class, 'create']);
+Route::post('save-song', [SongController::class, 'store']);
+Route::get('all-song', [SongController::class, 'show']);
+Route::get('edit-song/{id}', [SongController::class, 'edit']);
+Route::post('update-song/{id}', [SongController::class, 'update']);
+Route::get('destroy-song/{id}', [SongController::class, 'destroy']);
+
