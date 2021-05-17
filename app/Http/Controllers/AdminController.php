@@ -8,6 +8,12 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+
+    public function dowload()
+    {
+        return view('dowload');
+    }
+
     public function login()
     {
         return view('login');

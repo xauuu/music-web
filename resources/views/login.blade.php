@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>XAU | Sign in</title>
+    <title>GIANS | Sign in</title>
 
     <link href="{{ asset('backend/css/app.css') }}" rel="stylesheet">
 </head>

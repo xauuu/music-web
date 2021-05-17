@@ -13,7 +13,7 @@
 
     <link rel="shortcut icon" href="img/icons/icon-48x48.png" />
 
-    <title>XAU - Dashboard</title>
+    <title>GIANS | Dashboard</title>
     <link href="{{ asset('/backend/css/app.css') }}" rel="stylesheet">
 </head>
 
