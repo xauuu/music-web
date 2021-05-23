@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
 
-    public function dowload()
+    public function download()
     {
-        return view('dowload');
+        return view('download');
     }
 
     public function login()

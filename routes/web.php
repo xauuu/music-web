@@ -27,7 +27,7 @@ Route::get('/dashboard', function () {
     return view('admin');
 });
 
-Route::get('download', [AdminController::class, 'dowload']);
+Route::get('download', [AdminController::class, 'download']);
 
 Route::get('register', [UserController::class, 'register']);
 Route::post('check-register', [UserController::class, 'check_register']);
