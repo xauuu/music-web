@@ -18,7 +18,7 @@ class MusicController extends Controller
      */
     public function index()
     {
-        $song = Song::orderBy('name', 'ASC')->get();
+        $song = Song::orderBy('views', 'ASC')->get();
         SongResources::withoutWrapping();
 		return SongResources::collection($song);
     }
