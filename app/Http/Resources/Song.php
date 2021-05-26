@@ -19,6 +19,7 @@ class Song extends JsonResource
             'name' => $this->name,
             'album' => $this->album->name,
             'artist' => $this->artist,
+            'views' => $this->views,
             'imageUrl' => config('global.url-image').$this->imageUrl,
             'songUrl' => config('global.url-song').$this->songUrl,
         ];
