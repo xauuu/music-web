@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,15 +30,22 @@
                     <li class="sidebar-header">
                         Quản lí
                     </li>
-
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ URL::to('/user') }}">
+                            <i class="align-middle" data-feather="trending-up"></i> <span
+                                class="align-middle">User</span>
+                        </a>
+                    </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ URL::to('/all-album') }}">
-                            <i class="align-middle" data-feather="trending-up"></i> <span class="align-middle">Album</span>
+                            <i class="align-middle" data-feather="trending-up"></i> <span
+                                class="align-middle">Album</span>
                         </a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ URL::to('/all-song') }}">
-                            <i class="align-middle" data-feather="trending-up"></i> <span class="align-middle">Bài hát</span>
+                            <i class="align-middle" data-feather="trending-up"></i> <span class="align-middle">Bài
+                                hát</span>
                         </a>
                     </li>
 
@@ -174,8 +180,7 @@
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="{{ URL::to('admin/logout') }}">Đăng xuất</a>
                             </div>
-                            {{--
-                            --}}
+                            {{--  --}}
                         </li>
                     </ul>
                 </div>

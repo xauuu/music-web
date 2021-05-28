@@ -35,6 +35,8 @@ Route::post('check-register', [UserController::class, 'check_register']);
 Route::get('login', [AdminController::class, 'login']);
 Route::post('check-login', [AdminController::class, 'check_login']);
 
+Route::get('user', [AdminController::class, 'show']);
+
 Route::get('add-album', [AlbumController::class, 'create']);
 Route::post('save-album', [AlbumController::class, 'store']);
 Route::get('all-album', [AlbumController::class, 'show']);

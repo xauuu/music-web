@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
+
+    public function show()
+    {
+        $user = User::all();
+        return view('user')->with('user', $user);
+    }
 
     public function download()
     {
