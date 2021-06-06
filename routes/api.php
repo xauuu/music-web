@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\FavoriteController;
 use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -26,4 +27,8 @@ Route::put('update-view/{id}', 'App\Http\Controllers\Api\MusicController@update_
 Route::get('search/{keyword}', 'App\Http\Controllers\Api\MusicController@search');
 
 Route::post('login', [UserController::class, 'login']);
+
+Route::post('favorite', [FavoriteController::class, 'store']);
+Route::get('favorite/{id}', [FavoriteController::class, 'show']);
+Route::delete('favorite/{id}', [FavoriteController::class, 'destroy']);
 
