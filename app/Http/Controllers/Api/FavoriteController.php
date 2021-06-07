@@ -43,14 +43,18 @@ class FavoriteController extends Controller
             'song_id' => $request->song_id,
         ])->exists();
         if ($check) {
-            return "du ma may";
+            return response()->json([
+                'message' => 'Bài hát đã được thêm rồi <3'
+            ]);
         }
         $favorite = new Favorite();
         $favorite->user_id = $request->user_id;
         $favorite->song_id = $request->song_id;
         $favorite->save();
 
-        return "Đã thêm bài hát yêu thích";
+        return response()->json([
+            'message' => 'Đã thêm bài hát yêu thích'
+        ]);
     }
 
     /**
@@ -99,9 +103,13 @@ class FavoriteController extends Controller
     {
         $favorite = Favorite::find($id);
         if ($favorite->delete()) {
-            return "Đã xoá bài hát khỏi danh mục yêu thích";
+            return response()->json([
+                'message' => 'Đã xoá bài hát khỏi danh mục yêu thích'
+            ]);
         } else {
-            return "deo xoa duoc";
+            return response()->json([
+                'message' => 'Deo xoa duoc'
+            ]);
         }
     }
 }
