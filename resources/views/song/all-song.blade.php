@@ -20,7 +20,7 @@
         </div>
 
         <div class="table-responsive">
-            <table class="table mb-0">
+            <table class="table mb-0" id="tbSong">
                 <thead>
                     <tr class="text-nowrap">
                         <th scope="col">#</th>
@@ -57,3 +57,11 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+    <script>
+        $(document).ready(function () {
+            $('#tbSong').DataTable();
+        });
+    </script>
+@endpush

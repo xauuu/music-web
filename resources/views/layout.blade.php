@@ -14,6 +14,7 @@
 
     <title>GIANS | Dashboard</title>
     <link href="{{ asset('/backend/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/backend/css/datatables.bundle.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -203,6 +204,9 @@
     </div>
     @csrf
     <script src="{{ asset('backend/js/app.js') }}"></script>
+    <script src="{{ asset('backend/js/jquery-3.5.0.min.js') }}"></script>
+    <script src="{{ asset('backend/js/datatables.bundle.js') }}"></script>
+    @stack('scripts')
 </body>
 
 </html>
