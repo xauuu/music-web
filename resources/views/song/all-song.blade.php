@@ -61,7 +61,9 @@
 @push('scripts')
     <script>
         $(document).ready(function () {
-            $('#tbSong').DataTable();
+            $('#tbSong').DataTable( {
+                "order": [[ 0, "desc" ]]
+            } );
         });
     </script>
 @endpush
