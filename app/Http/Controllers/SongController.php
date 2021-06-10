@@ -39,7 +39,7 @@ class SongController extends Controller
     public function show()
     {
         AuthLogin();
-        $song = Song::all();
+        $song = Song::orderby('id', 'DESC')->get();
         return view('song.all-song')->with('song', $song);
     }
 
