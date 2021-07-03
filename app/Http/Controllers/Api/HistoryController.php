@@ -65,7 +65,12 @@ class HistoryController extends Controller
      */
     public function show($id)
     {
-        $history = History::where('user_id', $id)->orderby('id', 'DESC')->get();
+        if (request()->has('limit')) {
+            $history = History::where('user_id', $id)->orderby('id', 'DESC')->limit(request()->limit)->get();
+        } else {
+            $history = History::where('user_id', $id)->orderby('id', 'DESC')->get();
+        }
+
         Favorite::withoutWrapping();
         return Favorite::collection($history);
     }
