@@ -44,7 +44,9 @@ class HistoryController extends Controller
         ])->exists();
 
         if ($check) {
-            return null;
+            return response()->json([
+            'message' => 'Deo thêm nữa OK'
+        ]);
         }
 
         $history = new History();
