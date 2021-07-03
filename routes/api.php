@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\FavoriteController;
+use App\Http\Controllers\Api\HistoryController;
 use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -32,3 +33,6 @@ Route::post('favorite', [FavoriteController::class, 'store']);
 Route::get('favorite/{id}', [FavoriteController::class, 'show']);
 Route::delete('favorite/{id}', [FavoriteController::class, 'destroy']);
 
+Route::post('history', [HistoryController::class, 'store']);
+Route::get('history/{id}', [HistoryController::class, 'show']);
+Route::delete('history/{id}', [HistoryController::class, 'destroy']);
