@@ -44,10 +44,9 @@ class HistoryController extends Controller
             'song_id' => $request->song_id,
         ])->first();
 
-        if ($check) {
-            return response()->json([
-            'message' => 'Deo thêm nữa OK'
-        ]);
+        if ($check->exists) {
+            $check->touch();
+            return $check;
         }
 
         $history = new History();
