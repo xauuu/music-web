@@ -7,6 +7,7 @@ use App\Http\Resources\Favorite;
 use App\Http\Resources\Song;
 use App\Models\History;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HistoryController extends Controller
 {
@@ -41,10 +42,11 @@ class HistoryController extends Controller
         $check = History::where([
             'user_id' => $request->user_id,
             'song_id' => $request->song_id,
-        ])->exists();
+        ])->first();
 
-        if ($check) {
-            return null;
+        if ($check->exists) {
+            $check->touch();
+            return $check;
         }
 
         $history = new History();
@@ -66,9 +68,9 @@ class HistoryController extends Controller
     public function show($id)
     {
         if (request()->has('limit')) {
-            $history = History::where('user_id', $id)->orderby('id', 'DESC')->limit(request()->limit)->get();
+            $history = History::where('user_id', $id)->orderby('updated_at', 'DESC')->limit(request()->limit)->get();
         } else {
-            $history = History::where('user_id', $id)->orderby('id', 'DESC')->get();
+            $history = History::where('user_id', $id)->orderby('updated_at', 'DESC')->get();
         }
 
         Favorite::withoutWrapping();

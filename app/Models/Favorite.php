@@ -11,7 +11,7 @@ class Favorite extends Model
 
     protected $table = 'favorites';
     protected $primaryKey = 'id';
-    protected $fillable = [
+    protected  $fillable = [
         'user_id',
         'song_id'
     ];
