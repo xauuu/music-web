@@ -44,10 +44,11 @@ class HistoryController extends Controller
             'song_id' => $request->song_id,
         ])->first();
 
-        if ($check) {
+        if ($check->exists) {
+            $check->touch();
             return response()->json([
-            'message' => 'Deo thêm nữa OK'
-        ]);
+                'message' => 'Đã cập nhật lịch sử nghe nhạc'
+            ]);
         }
 
         $history = new History();
